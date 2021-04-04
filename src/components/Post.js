@@ -9,13 +9,13 @@ function Post({displayName, username, verified, text, image,avatar}) {
     return (
         <div className='post'>
             <div className='post-avatar'>
-                <Avatar src='https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png' />
+                <Avatar className='post__avatar' src='https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png' />
             </div>
             <div className='post__body'>
                 <div className='post__header'>
                     <div className='post__headerText'>
                         <h3>
-                            Rafeh Qazi <span><VerifiedUser className='post__badge'/></span>
+                            Rafeh Qazi <span className='post__headerSpecial'><VerifiedUser className='post__badge'/>@cleverQuazi</span>
                         </h3>
                     </div>
                     <div className='post__headerDescription'>
