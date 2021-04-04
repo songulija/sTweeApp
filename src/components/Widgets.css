@@ -3,6 +3,42 @@
 }
 /* use 30% of screen */
 
-.widgets > h2{
+/* add display flex to div that holds search icon and input field
+align center, bit of margin */
+.widgets__input{
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding:10px;
+    border-radius: 20px;
     margin-top: 10px;
+    margin-left: 20px;
 }
+
+/* adding border none to input field  */
+.widgets__input > input{
+    border: none;
+    background-color: var(--twitter-background);
+}
+
+.widgets__searchIcon{
+    color: gray;
+}
+
+/* add margin and padding to widgetContainer, background color is bit different,
+and make it rounded a bit */
+.widgets__widgetContainer{
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+
+.widgets__widgetContainer > h2{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
