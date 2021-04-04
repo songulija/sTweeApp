@@ -1,0 +1,36 @@
+/* add border right to sidebar. its like grey color, 
+we also want sidebar to use 30% of screen (flex: 0.3)
+and dont shrink less than 250px, adding margin and padding */
+.sidebar{
+    border-right: 1px solid var(--twitter-background);
+    flex: 0.3;
+    min-width: 250px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* add color to twitterIcon, fontSize becouse icon is actually a font,
+and adding important becouse we overwriting MaterialUI Icon*/
+.sidebar__twitterIcon{
+    color: var(--twitter-color);
+    font-size: 30px !important;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* give important tag becouse we're basically overwriting material UI theme
+this style we add on MaterialUi button, so we have to use important to change its style*/
+.sidebar__tweet{
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+}
+/* add color, font weight and background-color for button,
+text-transform inherit normal text(not uppercase*/
