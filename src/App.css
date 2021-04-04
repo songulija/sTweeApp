@@ -16,4 +16,7 @@ now we have varuable  --twitter-color you can use it where you want in css*/
 }
 /* change display to flex, so sidebar and everything else goes into row,
 add height 100 view height, it will stretch border to bottom becouse it now lets
-component use entire height of screen*/
+component use entire height of screen
+
+marginleft:auto means add as much padding as you can, adding to both sides
+allows it to center*/
