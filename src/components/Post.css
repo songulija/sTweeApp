@@ -1,0 +1,12 @@
+/* post div display is flex, aligning items at left side, add border and padding */
+.post{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--twitter-background);
+    padding-bottom: 10px;
+}
+
+/* round image inside post__body, it'll take 100% */
+.post_body >img{
+    border-radius: 20px;
+}

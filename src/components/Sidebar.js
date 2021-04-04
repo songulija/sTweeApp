@@ -8,7 +8,7 @@ import './sidebar.css'
 
 function Sidebar() {
     return (
-        <div>
+
             <div className='sidebar'>
                 {/* Twitter icon */}
                 <Twitter className='sidebar__twitterIcon' />
@@ -26,7 +26,7 @@ function Sidebar() {
                 {/* Button  -> Tweet */}
                 <Button variant='outlined' className='sidebar__tweet'>Tweet</Button>
             </div>
-        </div>
+
     )
 }
 

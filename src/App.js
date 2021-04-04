@@ -7,7 +7,7 @@ import Widgets from './components/Widgets';
 function App() {
   return (
     //BEM
-    <div className='App'>
+    <div className='app'>
       {/* Sidebar(left side) */}
       <Sidebar />
       {/* Feed (Where all content is)*/}

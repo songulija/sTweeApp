@@ -6,13 +6,13 @@ body{
 now we have varuable  --twitter-color you can use it where you want in css*/
 
 
-.App{
+.app {
   display: flex;
   height: 100vh;
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 10px
+  padding: 0 10px;
 }
 /* change display to flex, so sidebar and everything else goes into row,
 add height 100 view height, it will stretch border to bottom becouse it now lets

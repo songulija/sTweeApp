@@ -1,0 +1,48 @@
+/* padding and border bottom to tweetbox */
+.tweetBox{
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--twitter-background);
+    padding-right: 10px;
+}
+
+
+/* adding display flex to form. all child 'll be displayed vertically */
+.tweetBox > form{
+    display: flex;
+    flex-direction: column;
+}
+
+.tweetBox__input{
+    padding: 20px;
+    display: flex;
+}
+
+/* input to take full width, flex:1 */
+.tweetBox__input > input{
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+.tweetBox__imageInput{
+    border: none;
+    padding: 10px;
+}
+
+
+/* give important tag becouse we're basically overwriting material UI theme
+this style we add on MaterialUi button, so we have to use important to change its style*/
+.tweetBox__tweetButton{
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    margin-left: 20px !important;
+    margin-left: auto !important;
+}
+/* add as much margin left as you possibly can  */
+
