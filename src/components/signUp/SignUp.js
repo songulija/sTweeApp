@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import { auth, createUserProfileDocument } from '../../firebase.js'
-import CustomButton from '../customButton/CustomButton.js';
-import FormInput from '../formInput/FormInput.js';
-
+import React, {useState} from 'react'
+import CustomButton from '../customButton/CustomButton';
+import FormInput from '../formInput/FormInput'
+import {auth,createUserProfileDocument} from '../../firebase'
+import './styles.scss'
 
 function SignUp() {
+
     //useState initial value & funcction to update initial value
     const [displayName, setDisplayName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+
 
     const emptifyingStates = () => {
         setDisplayName('');
@@ -18,6 +20,7 @@ function SignUp() {
         setConfirmPassword('');
     }
 
+    
     //getting event data from submit button that trigered event
     const submitHandler = async (e) => {
         e.preventDefault();//prevent screen to refresh
@@ -40,21 +43,20 @@ function SignUp() {
 
     }
 
+return (
+    <div className='sign-up'>
+        <h2 className='title'>I do not have a acount</h2>
+        <span>Sign up with your email and password</span>
+        <form className='sign-up-form' onSubmit={submitHandler}>
+            <FormInput type='text' name='displayName' value={displayName} onChange={(e) => setDisplayName(e.target.value)} label='Display Name' required />
+            <FormInput type='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)} label='Email' required />
+            <FormInput type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} label='Password' required />
+            <FormInput type='password' name='confirmPassword' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} label='Confirm Password' required />
+            <CustomButton type='submit'>SIGN UP</CustomButton>
+        </form>
 
-    return (
-        <div className='sign-up'>
-            <h2 className='title'>I do not have a acount</h2>
-            <span>Sign up with your email and password</span>
-            <form className='sign-up-form' onSubmit={submitHandler}>
-                <FormInput type='text' name='displayName' value={displayName} onChange={(e) => setDisplayName(e.target.value)} label='Display Name' required />
-                <FormInput type='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)} label='Email' required />
-                <FormInput type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} label='Password' required />
-                <FormInput type='password' name='confirmPassword' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} label='Confirm Password' required />
-                <CustomButton type='submit'>SIGN UP</CustomButton>
-            </form>
-
-        </div>
-    )
+    </div>
+)
 }
 
 export default SignUp

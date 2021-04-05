@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "firebase": "^8.3.2",
     "firebase-tools": "^9.8.0",
+    "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-flip-move": "^3.0.4",
@@ -46,5 +47,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.0",
+    "style-loader": "^2.0.0"
   }
 }

@@ -1,18 +1,19 @@
-import { Widgets } from '@material-ui/icons'
 import React from 'react'
-import Feed from '../components/Feed'
 import Sidebar from '../components/Sidebar'
+import Feed from '../components/Feed'
+import Widgets from '../components/Widgets'
+import './styles.css'
 
 function HomeScreen() {
     return (
-        <div>
+        <div className='homescreen'>
             {/* Sidebar(left side) */}
             <Sidebar />
             {/* Feed (Where all content is)*/}
             <Feed />
 
             {/* Widgets(widgets on right side) */}
-            <Widgets />
+            <Widgets/>
         </div>
     )
 }
