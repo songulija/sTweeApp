@@ -13,3 +13,8 @@ const firebaseConfig = {
 
 // Creates and initializes a Firebase  instance. and we pass config for app
 const firebaseApp = firebase.initializeApp(firebaseConfig)
+
+// Cloud Firestore. there we'll save our data
+const db = firebaseApp.firestore();
+
+export default db;//so you can use Cloud Firestore anywhere
