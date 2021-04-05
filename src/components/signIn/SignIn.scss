@@ -1,0 +1,18 @@
+.sign-in {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+
+}
+//30% of total. add display flex to our sign-in components. and direction is column
+//so they will be vertically
+
+.title{
+    margin: 10px 0;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+//set buttons display to flex, and buttons inside that container will have space-between

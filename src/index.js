@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
+import store from './components/redux/store.js'
+import { Provider } from 'react-redux'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+ReactDOM.render(// wrap our app with the <Provider /> & set store to store. it'll make store available in app
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
 

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import './Feed.css'
 import Post from './Post'
 import TweetBox from './TweetBox'
-import db from '../firebase.js'
+import { db } from '../firebase.js'
+import FlipMove from 'react-flip-move'
 
 function Feed() {
 
@@ -32,13 +33,15 @@ function Feed() {
             <TweetBox />
 
             {/* POSTS. loop through posts array and get every single post. And for each build Post component
-            pass post properties values*/}
-            {posts.map((post) => (
-                <Post displayName={post.displayName} username={post.username}
-                    verified={post.verified} text={post.text} avatar={post.avatar}
-                    image={post.image} />
-            ))}
-
+            pass post properties values
+            FlipMove will animate each of posts*/}
+            <FlipMove>
+                {posts.map((post) => (
+                    <Post key={post.text} displayName={post.displayName} username={post.username}
+                        verified={post.verified} text={post.text} avatar={post.avatar}
+                        image={post.image} />
+                ))}
+            </FlipMove>
 
         </div>
 
