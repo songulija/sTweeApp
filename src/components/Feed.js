@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 import './Feed.css'
 import Post from './Post'
 import TweetBox from './TweetBox'
@@ -13,7 +13,7 @@ function Feed() {
 
     //useSelector is function to get store(global state) & we can pullout user state from it
     const user = useSelector((state) => state.user)
-    const {currentUser} = user;//destructure
+    const { currentUser } = user;//destructure
 
     //triggers when Feed component loads up
     useEffect(() => {
@@ -39,7 +39,7 @@ function Feed() {
             {currentUser && (
                 <TweetBox />
             )}
-            
+
 
             {/* POSTS. loop through posts array and get every single post. And for each build Post component
             pass post properties values

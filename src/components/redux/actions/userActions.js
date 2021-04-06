@@ -6,3 +6,12 @@ export const setCurrentUser = (user) => {
         payload: user,//setting payload equal to user that was passed here
     }
 }
+
+
+
+export const setCurrentImage = (imageUrl) => {
+    return {
+        type: 'SET_CURRENT_PICTURE',
+        payload: imageUrl
+    }
+}

@@ -5,8 +5,10 @@ import { Route, Link, Switch } from 'react-router'
 import './App.css';
 import HomeScreen from './screens/HomeScreen'
 import SignInSignUp from './screens/SignInSignUp';
-import {auth, createUserProfileDocument} from './firebase'
-import {setCurrentUser} from './components/redux/actions/userActions'
+import { auth, createUserProfileDocument } from './firebase'
+import firebase from './firebase'
+import { setCurrentImage } from './components/redux/actions/userActions'
+import { setCurrentUser } from './components/redux/actions/userActions'
 
 function App() {
 
@@ -32,6 +34,13 @@ function App() {
 
         });
 
+        firebase.storage().ref('users/' + userAuth.uid + '/profile.jpg').getDownloadURL().then(imgUrl => {
+          dispatch(setCurrentImage(imgUrl))
+        })
+
+
+
+
       }
 
       //if user logs out dispatch setCurrentUser action. reducer will catch it and update state of user
@@ -51,8 +60,8 @@ function App() {
     <div className='app'>
       {/* Using switch so when it finds route it will go straight to it. not looking at others */}
       <Switch>
-        <Route path='/' exact component={HomeScreen}/>
-        <Route path='/signin' component={SignInSignUp}/>
+        <Route path='/' exact component={HomeScreen} />
+        <Route path='/signin' component={SignInSignUp} />
       </Switch>
     </div>
   );

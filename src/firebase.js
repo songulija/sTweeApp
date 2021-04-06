@@ -29,7 +29,7 @@ export const storage = firebase.storage();
 //set google authentication. gives access to GoogleAuthProvider
 const provider = new firebase.auth.GoogleAuthProvider();
 //it takes couple custom parameters. this will always open google popup when we use GoogleAuthProvider
-provider.setCustomParameters({ promp: 'select_acount' })
+provider.setCustomParameters({ prompt: 'select_account' })
 //we only want google popup. so i add provider that we created
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 

@@ -1,14 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { userReducer } from './reducers/userReducer.js'
+import { profilePicture, userReducer } from './reducers/userReducer.js'
 import logger from 'redux-logger'
 
 
 //combine all reducers to one. adding reducers one by one.
 //and we can change games
 const allReducers = combineReducers({
-    user: userReducer
+    user: userReducer,
+    picture: profilePicture
 })
 
 //middleware that store is expecting will be . thunk is to 
